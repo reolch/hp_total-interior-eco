@@ -1,9 +1,7 @@
 import React from 'react';
 import styles from './page.module.css';
 
-interface AboutProps {}
-
-const About: React.FC<AboutProps> = () => {
+const About = () => {
   const services = [
     '住宅インテリアデザイン',
     'オフィス空間デザイン',

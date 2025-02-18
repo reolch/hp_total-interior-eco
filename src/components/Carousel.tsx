@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './Carousel.module.css';
+import Image from 'next/image';
 
 interface Company {
   logo: string;
@@ -26,7 +27,7 @@ const Carousel: React.FC<CarouselProps> = ({ companies }) => {
 
     cloneFirstSet();
 
-    let scrollWidth = track.scrollWidth / 2;
+    const scrollWidth = trackRef.current?.scrollWidth ?? 0;
     let currentScroll = 0;
 
     const animate = () => {
@@ -47,7 +48,13 @@ const Carousel: React.FC<CarouselProps> = ({ companies }) => {
       <div className={styles.carouselTrack} ref={trackRef}>
         {companies.map((company, index) => (
           <div key={index} className={styles.carouselItem}>
-            <img src={company.logo} alt={company.name} className={styles.companyLogo} />
+            <Image
+              src={company.logo}
+              alt={company.name}
+              width={500}
+              height={300}
+              className={styles.companyLogo}
+            />
           </div>
         ))}
       </div>

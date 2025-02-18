@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Slideshow.module.css';
+import Image from 'next/image';
 
 interface Slide {
   image: string;
@@ -7,10 +8,10 @@ interface Slide {
 }
 
 const slides: Slide[] = [
-  { image: '/images/6.webp', text: '' },
-  { image: '/images/10.webp', text: '' },
-  { image: '/images/1.webp', text: '' },
-  { image: '/images/2.webp', text: '' }
+  { image: '/hp_total-interior-eco/images/6.webp', text: '' },
+  { image: '/hp_total-interior-eco/images/10.webp', text: '' },
+  { image: '/hp_total-interior-eco/images/1.webp', text: '' },
+  { image: '/hp_total-interior-eco/images/2.webp', text: '' }
 ];
 
 const SlideShow: React.FC = () => {
@@ -31,7 +32,13 @@ const SlideShow: React.FC = () => {
           key={index}
           className={`${styles.slide} ${index === currentSlide ? styles.active : ''}`}
         >
-          <img src={slide.image} alt={`Slide ${index}`} className={styles.slideImage} />
+          <Image
+            src={slide.image}
+            alt={`Slide ${index + 1}`}
+            width={500}
+            height={300}
+            className={styles.slideImage}
+          />
           <div className={styles.slideText}>{slide.text}</div>
         </div>
       ))}

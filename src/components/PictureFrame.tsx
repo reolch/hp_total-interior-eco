@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './PictureFrame.module.css';
+import Image from 'next/image';
 
 interface PictureFrameProps {
   image: string;
@@ -17,7 +18,13 @@ const PictureFrame: React.FC<PictureFrameProps> = ({
   return (
     <div className={styles.frameContainer}>
       <div className={`${styles.frame} ${styles[orientation]}`}>
-        <img src={image} alt={title} className={styles.painting} />
+        <Image
+          src={image}
+          alt={title}
+          width={500}
+          height={300}
+          className={styles.painting}
+        />
       </div>
       <div className={styles.title}>
         <a href={link}>{title}</a>

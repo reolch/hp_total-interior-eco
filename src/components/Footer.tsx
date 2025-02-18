@@ -2,7 +2,9 @@ import React from 'react';
 import styles from './Footer.module.css';
 import Link from 'next/link';
 
-interface FooterProps {}
+interface FooterProps {
+  props?: Record<string, never>
+}
 
 const Footer: React.FC<FooterProps> = () => {
   const links = [

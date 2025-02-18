@@ -1,7 +1,6 @@
 'use client'
 
 import React from "react";
-import Image from "next/image";
 import styles from "./page.module.css";
 
 import SlideShow from "../components/Slideshow";
@@ -48,9 +47,24 @@ const Home: React.FC = () => {
             以下の店舗の写真は、施工例になります。
           </p>
           <div className={styles.portfolioPictureframe}>
-            <PictureFrame image="/images/2.webp" title="パーソナルジム" link="https://trigger2023.com" orientation="landscape" />
-            <PictureFrame image="/images/6.webp" title="お菓子屋さん" link="https://reolch.github.io/portfolio_lp_hand_in_hand/" orientation="landscape" />
-            <PictureFrame image="/images/10.webp" title="プログラミングスクール" link="#" orientation="landscape" />
+            <PictureFrame 
+              image="/hp_total-interior-eco/images/2.webp" 
+              title="パーソナルジム" 
+              link="https://trigger2023.com" 
+              orientation="landscape" 
+            />
+            <PictureFrame 
+              image="/hp_total-interior-eco/images/6.webp" 
+              title="お菓子屋さん" 
+              link="https://reolch.github.io/portfolio_lp_hand_in_hand/" 
+              orientation="landscape" 
+            />
+            <PictureFrame 
+              image="/hp_total-interior-eco/images/10.webp" 
+              title="プログラミングスクール" 
+              link="#" 
+              orientation="landscape" 
+            />
           </div>
         </section>
 
