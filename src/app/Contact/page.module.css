@@ -1,0 +1,119 @@
+.contactContainer {
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 900;
+}
+
+.contactForm {
+  width: 100%;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 0.9rem;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 200;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #666;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #444;
+}
+
+.submitButton:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* タブレット以上 */
+@media (min-width: 768px) {
+  .contactContainer {
+    width: 80%;
+    max-width: 800px;
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .formGroup label {
+    font-size: 1rem;
+  }
+
+  .input,
+  .textarea {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* デスクトップ以上 */
+@media (min-width: 1024px) {
+  .contactContainer {
+    width: 70%;
+    padding: 3rem;
+  }
+
+  .formGroup {
+    margin-bottom: 2rem;
+  }
+
+  .submitButton {
+    width: auto;
+    min-width: 200px;
+    display: block;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
+}
+  

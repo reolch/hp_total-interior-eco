@@ -1,0 +1,71 @@
+.frameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  max-width: 300px;
+}
+
+.frame {
+  border: 15px solid #8B4513;
+  box-shadow: 
+    0 0 0 2px #8B4513,
+    8px 8px 15px rgba(0, 0, 0, 0.4);
+  position: relative;
+  background: #fff;
+  padding: 10px;
+}
+
+.frame.landscape {
+  width: 300px;
+  height: 200px;
+}
+
+.frame.portrait {
+  width: 200px;
+  height: 300px;
+}
+
+.painting {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  margin-top: 15px;
+  text-align: center;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 500;
+}
+
+.title a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.title a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .frameContainer {
+    margin: 10px;
+    max-width: 250px;
+  }
+
+  .frame.landscape {
+    width: 250px;
+    height: 167px;
+  }
+
+  .frame.portrait {
+    width: 167px;
+    height: 250px;
+  }
+
+  .title a {
+    font-size: 1rem;
+  }
+} 
